@@ -1,18 +1,9 @@
-import React from "react";
-
-const AnimalButton = ({ animal, sound, imagen, onClick }) => {
-  const handleClick = () => {
-    const audio = new Audio(sound);
-    audio.play();
-    onClick(animal);
-  };
-
+function AnimalButton({ animal, imagen, onClick, title }) {
   return (
-    <button onClick={handleClick}>
-      {animal.name}
-      <img src={imagen} width={50} alt={animal.name} />
+    <button className="animal-button" onClick={onClick} title={title}>
+      <img src={imagen} width={100} alt={animal} className="animal-image" />
     </button>
   );
-};
+}
 
 export default AnimalButton;
