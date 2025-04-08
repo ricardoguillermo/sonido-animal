@@ -10,5 +10,6 @@ export default defineConfig({
   preview: {
     host: "0.0.0.0", // Configuración para "vite preview"
     port: 3000, // Puerto que Render puede detectar
+    allowedHosts: ["sonido-animal.onrender.com"], // Agrega el host permitido
   },
 });
