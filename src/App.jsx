@@ -25,7 +25,8 @@ function App() {
           { name: "Lady Brunita", image: "/imagen/player1.png", score: 0 },
           { name: "Mister Thiaguito", image: "/imagen/player2.png", score: 0 },
           { name: "Super Abuelo", image: "/imagen/player3.jpg", score: 0 },
-          { name: "Babyr Máximo", image: "/imagen/player4.jpg", score: 0 },
+          { name: "Baby Máximo", image: "/imagen/player4.jpg", score: 0 },
+         { name: "Super Abuela", image: "/imagen/player4.jpg", score: 0 },
         ];
   });
 
