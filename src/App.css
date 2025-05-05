@@ -1,373 +1,81 @@
-/* Fondo de la aplicación */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 .app-container {
   background: linear-gradient(to bottom, #6dd5ed, #2193b0);
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+
   font-family: "Arial", sans-serif;
   text-align: center;
   padding: 20px;
 }
 
-/* Título principal */
+/* .app-container button {
+  background-color: rgb(17, 199, 199);
+  margin: 5px;
+} */
+
+animal-button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+}
+
 .title {
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Subtítulos */
-.subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-/* Contenedor de jugadores */
-.players-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Tarjetas de jugadores */
-.player-card {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  padding: 10px;
-
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
-}
-
-.player-card:hover {
-  transform: scale(1.1);
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.player-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.player-name {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-/* Contenedor del jugador, puntaje y tiempo */
-.player-score-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: rgba(39, 19, 70, 0.2);
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  height: 100px;
-}
-
-/* Información del jugador */
-.player-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-}
-
-.player-image-selected {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid white;
-}
-
-.player-name-selected {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  margin: 0;
-  text-align: center;
-}
-
-/* Contenedor del puntaje */
-.score-container {
-  text-align: center;
-  width: 100px;
-  height: 100px;
-}
-
-.score-container h2 {
-  font-size: 1rem;
-  margin-bottom: 5px;
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.score {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffeb3b;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Contenedor del tiempo */
-.time-container {
-  text-align: center;
-  width: 100px;
-}
-
-.time-container h2 {
-  font-size: 1rem;
-  margin-bottom: 5px;
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.time {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffeb3b;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Botones */
-.button {
-  background: #f2e0f9;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-  border: #4caf50 4px solid;
-}
-
-.button:hover {
-  background: #feb47b;
-  transform: scale(1.1);
-}
-
-.button:disabled {
-  background: gray;
-  cursor: not-allowed;
-}
-
-/* Botón de reinicio */
-.restart-button {
-  background: #f2e0f9;
-}
-
-.restart-button:hover {
-  background: #c0392b;
-}
-
-/* Botón de cambiar jugador */
-.change-player-button {
-  background: #3498db;
-}
-
-.change-player-button:hover {
-  background: #2980b9;
-}
-
-/* Botón de reproducir sonido */
-.play-sound-button {
-  background: #f2e0f9;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  width: 200px;
-  padding: 10px;
-  border-radius: 20px;
-  font-size: 1rem;
-  margin-left: 100px;
-  margin-right: 100px;
-  border: 4px solid blue;
-}
-
-.play-sound-button:hover {
-  background: #27ae60;
-}
-
-/* Botón de inicio */
-.home-button {
-  background: #f2e0f9;
-}
-
-.home-button:hover {
-  background: #71368a;
-}
-
-/* Contenedor de los botones en fila */
-.button-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 35px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-/* Estilo para las imágenes dentro de los botones */
-.button-icon {
-  width: 40px;
-  height: 40px;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Tabla de puntajes */
-.score-table-container {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.score-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 0 auto;
-}
-
-.score-table th,
-.score-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-}
-
-.score-table th {
-  background-color: #4caf50;
-  color: white;
-}
-
-.player-table-image {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-/* Botón para borrar todos los puntajes */
-.clear-scores-button {
-  background: #e74c3c;
-  margin-top: 20px;
-}
-
-.clear-scores-button:hover {
-  background: #c0392b;
-}
-
-/* Contenedor de los botones de animales */
-.animals-container {
-  display: flex;
-  justify-content: center; /* Centra los botones horizontalmente */
-  align-items: center; /* Alinea los botones verticalmente */
-  gap: 15px; /* Espacio entre los botones */
-  flex-wrap: wrap; /* Permite que los botones se ajusten si no caben en una fila */
-  margin-top: 50px;
-  margin-bottom: 100px;
-}
-
-/* Botones de animales */
-.animal-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  border-radius: 10px;
-  padding: 0; /* Elimina el padding para que la imagen ocupe todo el espacio */
-  cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
-  margin: 10px; /* Espacio entre los botones */
-  width: 100px; /* Tamaño del botón */
-  height: 100px; /* Tamaño del botón */
-  overflow: hidden; /* Asegura que las imágenes no se salgan del botón */
-}
-
-.animal-button:hover {
-  transform: scale(1.1);
-  background: rgba(255, 255, 255, 0.3);
-}
-
-/* Imágenes dentro de los botones de animales */
-.animal-button img {
-  width: 100%; /* La imagen ocupa todo el ancho del botón */
-  height: 100%; /* La imagen ocupa todo el alto del botón */
-  object-fit: contain; /* Ajusta la imagen para que entre sin cortes */
-  border-radius: 50%; /* Hace que las imágenes sean circulares */
-}
-
-/* Estilo para el contenedor de errores */
-.error-icons {
-  font-size: 2rem; /* Aumenta el tamaño de la fuente */
-  display: flex;
-  justify-content: center;
-  gap: 10px; /* Espacio entre los íconos */
-  margin-top: 10px; /* Espacio superior */
-}
-
-/* Estilo para cada ícono de error */
-.error-icon {
-  color: red; /* Color para los errores */
-  font-size: 2.5rem; /* Tamaño más grande para los íconos */
-}
-
-.error-icon.empty {
-  color: gray; /* Color para los errores vacíos */
-}
-
-/* Contenedor del mensaje de fin del juego */
 .end-game-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(113, 121, 106, 0.8);
+  width: 100vw;
+  height: 100vh;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   color: white;
+  backdrop-filter: brightness(0.7);
   z-index: 1000;
-}
-
-.end-game-message img {
-  width: 200px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.end-game-message p {
-  font-size: 1.5rem;
   text-align: center;
 }
 
-.close-message-button {
-  background: #e74c3c;
-  color: white;
+button.animal-button {
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1rem;
   cursor: pointer;
-  margin-top: 20px;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+  /* margin: 2px; */
 }
 
-.close-message-button:hover {
-  background: #c0392b;
+.botonpre {
+  width: 100px;
+  height: 50px;
+  border-radius: 10%;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(69, 42, 238);
+  transition: transform 0.3s ease;
+  margin: 25px;
+  color: white;
 }

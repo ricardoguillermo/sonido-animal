@@ -1,0 +1,116 @@
+.start-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #bde0fe, #a2d2ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+/* Jugadores */
+.players-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.player-card {
+  flex: 0 0 auto;
+  width: 140px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.player-card:hover {
+  box-shadow: 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transform: scale(1.05);
+}
+
+.player-image {
+  object-fit: cover;
+  border-radius: 8px;
+  padding: 2px;
+}
+
+/* es la papelera  */
+#borrar-jugador {
+  background: #f7f6f6;
+  color: rgb(26, 1, 1);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/*formulario  */
+.form-section,
+.table-section {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 600px;
+  background: #bde0fe;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.table-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+}
+form input {
+  padding: 8px;
+  margin: 5px;
+  width: calc(50% - 12px);
+}
+
+form button {
+  padding: 10px 20px;
+  background: #8ecae6;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* tabla de anotaciones */
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+#borrarpuntajes {
+  background: #e71b09;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}

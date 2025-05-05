@@ -135,9 +135,34 @@ const animals = [
     image: "/imagen/ballena.jpg",
   },
   {
-    name: "canario",
+    name: "Canario",
     sound: "/sound/canario.mp3",
     image: "/imagen/canario.jpg",
+  },
+  {
+    name: "Abeja",
+    sound: "/sound/canario.mp3",
+    image: "/imagen/abeja.png",
+  },
+  {
+    name: "Búfalo",
+    sound: "/sound/bufalo.mp3",
+    image: "/imagen/bufalo.jpg",
+  },
+  {
+    name: "Grillo",
+    sound: "/sound/grillo.mp3",
+    image: "/imagen/grillo.jpg",
+  },
+  {
+    name: "Mosquito",
+    sound: "/sound/mosquito.mp3",
+    image: "/imagen/mosquito.jpg",
+  },
+  {
+    name: "Oso",
+    sound: "/sound/oso.mp3",
+    image: "/imagen/oso.jpg",
   },
 ];
 
